@@ -1,0 +1,179 @@
+1. Check whether a number is odd or even.
+2. Print even numbers from 1 to 100.
+3. Print odd numbers from 1 to 10.
+4. Calculate the factorial of numbers from 1 to 5.
+5. Count even numbers from 1 to 100.
+6. Count odd numbers from 1 to 1000.
+7. Find the sum of even numbers from 1 to 500.
+8. Find the sum of odd numbers from 1 to 100.
+9. Find the sum of all numbers from 1 to 600.
+10. Reverse a number.
+11. Check whether a number is a palindrome or not.
+12. Print all palindrome numbers from 1 to 1000.
+13. Check whether a number is an Armstrong number or not.
+14. Print all Armstrong numbers from 1 to 600.
+15. Count the digits in a given number.
+16. Find the sum of digits in a number.
+17. Swap two numbers using a third variable.
+18. Swap two numbers without using a third variable.
+19. Print Fibonacci series up to 10 terms.
+20. Print Fibonacci series with sum not exceeding 10.
+21. Reverse a string.
+22. Check whether a string is a palindrome.
+23. Sort an array in ascending order.
+24. Sort an array in descending order.
+25. Find the maximum and minimum numbers in an array.
+26. Count the number of vowels in a string.
+27. Count the number of vowels and consonants in a string.
+28. Print vowels and consonants separately from a string.
+29. Count the frequency of each character in a string.
+30. Count the frequency of each word in a sentence.
+31. Count the number of words in a sentence.
+32. Convert each word in a string to init cap (capitalize first letter).
+33. Count capital letters, small letters, digits, and special characters in a string.
+34. Convert lowercase to uppercase and vice versa in a string.
+35. Check whether a number is a prime number.
+36. Print prime numbers from 1 to 100.
+37. Count the number of prime numbers from 1 to 500.
+
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////
+1. Reverse an array.
+2. Find the maximum and minimum elements in an array.
+3. Remove duplicates from an array.
+4. Sort an array in ascending and descending order.
+5. Merge two arrays and remove duplicates.
+6. Find the sum and average of array elements.
+7. Rotate array elements to the left/right by `n` positions.
+8. Reverse a string without using built-in methods.
+9. Check if a string is a palindrome.
+10. Count vowels and consonants in a string.
+11. Remove duplicate characters from a string.
+12. Find the first non-repeating character.
+13. Convert the first letter of each word to uppercase (title case).
+14. Compress a string (e.g., "aaabbc" → "a3b2c1").
+15. Print a triangle pattern using `for` loop:
+*
+**
+***
+16. Check whether a number is even or odd.
+17. Find if a number is prime.
+18. Sum all even numbers between 1 and 100.
+19. Print FizzBuzz from 1 to 50.
+20. Find factorial of a number using loop.
+21. Generate Fibonacci series up to `n` terms.
+22. Find the second largest number in an array.
+23. Find the frequency of each element in an array.
+24. Find the common elements in two arrays.
+25. Move all zeros to the end of an array.
+26. Remove all falsy values (`false`, `0`, `''`, `null`, `undefined`, `NaN`) from an array.
+27. Find the longest word in a string.
+28. Check if two strings are anagrams.
+29. Find the number of words in a string.
+30. Replace all spaces in a string with hyphens.
+31. Convert a sentence to camelCase.
+32. Capitalize the first and last letter of each word in a string.
+33. Count capital letters, small letters, digits, and special characters in a string.
+34. Convert lowercase to uppercase and vice versa in a string.
+35. Check whether a number is a prime number.
+36. Print prime numbers from 1 to 100.
+37. Count the number of prime numbers from 1 to 500.
+
+
+***********************************************************************
+//later 
+/////////////////////////////////////////////
+--- Number Operations ---
+1. Check whether a number is odd or even.
+2. Print even numbers from 1 to 100.
+3. Print odd numbers from 1 to 10.
+4. Count even numbers from 1 to 100.
+5. Count odd numbers from 1 to 1000.
+6. Find the sum of even numbers from 1 to 500.
+7. Find the sum of odd numbers from 1 to 100.
+8. Find the sum of all numbers from 1 to 600.
+9. Find the sum of digits in a number.
+10. Sum all even numbers between 1 and 100.
+11. Print FizzBuzz from 1 to 50.
+
+--- Prime & Armstrong Numbers ---
+12. Check whether a number is an Armstrong number or not.
+13. Print all Armstrong numbers from 1 to 600.
+14. Check whether a number is a prime number.
+15. Find if a number is prime.
+16. Print prime numbers from 1 to 100.
+17. Count the number of prime numbers from 1 to 500.
+
+--- Palindrome & Reverse ---
+18. Reverse a number.
+19. Reverse a string.
+20. Reverse a string without using built-in methods.
+21. Reverse an array.
+22. Check whether a number is a palindrome or not.
+23. Print all palindrome numbers from 1 to 1000.
+24. Check whether a string is a palindrome.
+25. Check if a string is a palindrome.
+
+--- Fibonacci & Factorial ---
+26. Calculate the factorial of numbers from 1 to 5.
+27. Find factorial of a number using loop.
+28. Print Fibonacci series up to 10 terms.
+29. Print Fibonacci series with sum not exceeding 10.
+30. Generate Fibonacci series up to n terms.
+
+--- Swap & Digits ---
+31. Count the digits in a given number.
+32. Swap two numbers using a third variable.
+33. Swap two numbers without using a third variable.
+34. Count capital letters, small letters, digits, and special characters in a string.
+
+--- Array Operations ---
+35. Sort an array in ascending order.
+36. Sort an array in descending order.
+37. Sort an array in ascending and descending order.
+38. Find the maximum and minimum numbers in an array.
+39. Find the maximum and minimum elements in an array.
+40. Find the second largest number in an array.
+41. Remove duplicates from an array.
+42. Merge two arrays and remove duplicates.
+43. Rotate array elements to the left/right by n positions.
+44. Find the sum and average of array elements.
+45. Find the frequency of each element in an array.
+46. Find the common elements in two arrays.
+47. Move all zeros to the end of an array.
+48. Remove all falsy values (false, 0, '', null, undefined, NaN) from an array.
+
+--- String Operations ---
+49. Count the number of vowels in a string.
+50. Count the number of vowels and consonants in a string.
+51. Count vowels and consonants in a string.
+52. Print vowels and consonants separately from a string.
+53. Count the frequency of each character in a string.
+54. Remove duplicate characters from a string.
+55. Find the first non-repeating character.
+56. Compress a string (e.g., "aaabbc" → "a3b2c1").
+57. Find the longest word in a string.
+58. Check if two strings are anagrams.
+
+--- Word & Sentence Processing ---
+59. Count the frequency of each word in a sentence.
+60. Count the number of words in a sentence.
+61. Find the number of words in a string.
+62. Replace all spaces in a string with hyphens.
+63. Convert a sentence to camelCase.
+
+--- Case Conversion & Capitalization ---
+64. Convert each word in a string to init cap (capitalize first letter).
+65. Convert the first letter of each word to uppercase (title case).
+66. Capitalize the first and last letter of each word in a string.
+67. Convert lowercase to uppercase and vice versa in a string.
+
+--- Special Patterns ---
+68. Print a triangle pattern using for loop:
+*
+**
+***

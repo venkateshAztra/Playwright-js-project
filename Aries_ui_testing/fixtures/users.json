@@ -1,0 +1,11 @@
+{
+  "validUser": {
+    "username": "tenant207admin",
+    "password": "12345678"
+  },
+  "invalidUser": {
+    "username": "wronguser",
+    "password": "wrongpass"
+  },
+  "tenantUrl": "http://aries-web.s3-website-us-east-1.amazonaws.com/#/sjjaAcpDDrBlPMk09e3l9aux6/login"
+}

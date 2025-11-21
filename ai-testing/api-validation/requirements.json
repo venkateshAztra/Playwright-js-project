@@ -1,0 +1,103 @@
+{
+  "request": {
+    "username": {
+      "type": "string",
+      "min_length": 5,
+      "max_length": 15,
+      "pattern": "alphanumeric",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "min_length": 8,
+      "max_length": 20,
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "required": true
+    },
+    "age": {
+      "type": "integer",
+      "min": 18,
+      "max": 99,
+      "required": true
+    },
+    "deviceID": {
+      "type": "string",
+      "min_length": 10,
+      "max_length": 10,
+      "pattern": "alphanumeric",
+      "required": true
+    },
+    "uuid": {
+      "type": "string",
+      "format": "uuid",
+      "length": 36,
+      "required": true
+    }
+  },
+  "response": {
+    "valid": {
+      "statusCode": 200,
+      "status": {
+        "type": "string",
+        "required": true,
+        "value": "success"
+      },
+      "message": {
+        "type": "string",
+        "required": true,
+        "example": "User registered successfully"
+      },
+      "data": {
+        "type": "object",
+        "required": true,
+        "fields": {
+          "userId": {
+            "type": "string",
+            "required": true,
+            "pattern": "^USR[0-9]{6}$"
+          }
+        }
+      },
+      "errors": {
+        "type": "array",
+        "required": true,
+        "empty": true
+      }
+    },
+    "invalid": {
+      "statusCode": 400,
+      "status": {
+        "type": "string",
+        "required": true,
+        "value": "Failed"
+      },
+      "errors": {
+        "type": "array",
+        "required": true,
+        "items": {
+          "field": {
+            "type": "string",
+            "required": true
+          },
+          "message": {
+            "type": "string",
+            "required": true
+          }
+        }
+      },
+      "message": {
+        "type": "string",
+        "required": false
+      },
+      "data": {
+        "type": "object",
+        "required": false,
+        "nullable": true
+      }
+    }
+  }
+}

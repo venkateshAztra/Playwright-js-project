@@ -1,0 +1,40 @@
+{
+  "timestamp": "2025-11-12T14:41:22.179652",
+  "dataset_drift_detected": false,
+  "drift_share": 0.0,
+  "number_of_columns": 5,
+  "number_of_drifted_columns": 0,
+  "drift_by_columns": {
+    "sepal length (cm)": {
+      "drift_detected": false,
+      "drift_score": 0.125,
+      "reference_mean": 5.843,
+      "current_mean": 5.867
+    },
+    "sepal width (cm)": {
+      "drift_detected": false,
+      "drift_score": 0.089,
+      "reference_mean": 3.057,
+      "current_mean": 3.044
+    },
+    "petal length (cm)": {
+      "drift_detected": false,
+      "drift_score": 0.156,
+      "reference_mean": 3.758,
+      "current_mean": 3.822
+    },
+    "petal width (cm)": {
+      "drift_detected": false,
+      "drift_score": 0.098,
+      "reference_mean": 1.199,
+      "current_mean": 1.178
+    },
+    "target": {
+      "drift_detected": false,
+      "drift_score": 0.067,
+      "reference_mean": 1.0,
+      "current_mean": 1.022
+    }
+  },
+  "summary": "✅ NO DRIFT: All features stable (0.0% drift share)"
+}

@@ -1,0 +1,26 @@
+{
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es2022": true
+  },
+  "globals": {
+    "require": "readonly",
+    "module": "readonly",
+    "exports": "readonly",
+    "__dirname": "readonly",
+    "__filename": "readonly",
+    "process": "readonly",
+    "Buffer": "readonly",
+    "console": "readonly"
+  },
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "script"
+  },
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-console": "off"
+  }
+}

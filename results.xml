@@ -1,0 +1,8 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="1" errors="0" time="693.487708">
+<testsuite name="Aries_ui_testing\tests\auth\aries-login.spec.js" timestamp="2025-11-21T06:40:31.757Z" hostname="chromium" tests="1" failures="0" skipped="1" time="0" errors="0">
+<testcase name="Aries Login Tests › Valid login" classname="Aries_ui_testing\tests\auth\aries-login.spec.js" time="0">
+<skipped>
+</skipped>
+</testcase>
+</testsuite>
+</testsuites>
