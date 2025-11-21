@@ -26,11 +26,69 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run ONLY aries-login.spec.js
-        run: npx playwright test Aries_ui_testing/tests/auth/aries-login.spec.js --reporter=html
+        run: npx playwright test Aries_ui_testing/tests/auth/aries-login.spec.js --reporter=html --reporter=json
 
-      - name: Upload Playwright HTML report
+      # Capture summary JSON
+      - name: Save test results
+        run: |
+          mkdir -p test-summary
+          cp test-results/*.json test-summary/results.json 2>/dev/null || true
+
+      # Upload HTML report + screenshots
+      - name: Upload Test Artifacts (HTML + Screenshots)
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: playwright-report
-          path: playwright-report/
+          name: playwright-test-artifacts
+          path: |
+            playwright-report/
+            test-results/
+
+      # Read summary (pass/fail) using jq
+      - name: Extract test summary
+        id: summary
+        run: |
+          PASSED=$(jq '[.suites[].tests[] | select(.status=="passed")] | length' test-summary/results.json)
+          FAILED=$(jq '[.suites[].tests[] | select(.status=="failed")] | length' test-summary/results.json)
+          TOTAL=$(jq '[.suites[].tests[]] | length' test-summary/results.json)
+          echo "passed=$PASSED" >> $GITHUB_OUTPUT
+          echo "failed=$FAILED" >> $GITHUB_OUTPUT
+          echo "total=$TOTAL" >> $GITHUB_OUTPUT
+
+      # ------------------------------------------------
+      # Teams Notification on FAILURE
+      # ------------------------------------------------
+      - name: Send Teams Notification - Failure
+        if: failure()
+        uses: aliencube/microsoft-teams-actions@v0.6.0
+        with:
+          webhook-uri: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          title: "❌ Playwright Test Failed"
+          summary: "aries-login.spec.js failed"
+          text: |
+            ❌ **Playwright Test Summary**
+            - Passed: ${{ steps.summary.outputs.passed }}
+            - Failed: ${{ steps.summary.outputs.failed }}
+            - Total: ${{ steps.summary.outputs.total }}
+            📸 **Screenshots & Report:**  
+            Your artifacts (HTML report + screenshots) are uploaded to GitHub Actions.  
+            🔗 View Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+      # ------------------------------------------------
+      # Teams Notification on SUCCESS
+      # ------------------------------------------------
+      - name: Send Teams Notification - Success
+        if: success()
+        uses: aliencube/microsoft-teams-actions@v0.6.0
+        with:
+          webhook-uri: ${{ secrets.TEAMS_WEBHOOK_URL }}
+          title: "✅ Playwright Test Passed"
+          summary: "aries-login.spec.js passed successfully"
+          text: |
+            ✅ **Playwright Test Summary**
+            - Passed: ${{ steps.summary.outputs.passed }}
+            - Failed: ${{ steps.summary.outputs.failed }}
+            - Total: ${{ steps.summary.outputs.total }}
+            📸 **Screenshots & Report:**  
+            Your artifacts (HTML report + screenshots) are uploaded to GitHub Actions.  
+            🔗 View Run: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
