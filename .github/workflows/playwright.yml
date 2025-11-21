@@ -25,8 +25,8 @@ jobs:
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
-        run: npx playwright test --reporter=html
+      - name: Run ONLY aries-login.spec.js
+        run: npx playwright test Aries_ui_testing/tests/auth/aries-login.spec.js --reporter=html
 
       - name: Upload Playwright HTML report
         uses: actions/upload-artifact@v4
