@@ -3,6 +3,10 @@ test-results/
 playwright-report/
 html-report/
 .env
+env
 *.log
 .DS_Store
 Thumbs.db
+# API Keys and secrets
+*.key
+*api*key*
