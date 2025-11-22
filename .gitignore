@@ -10,3 +10,9 @@ Thumbs.db
 # API Keys and secrets
 *.key
 *api*key*
+# Test artifacts
+*.png
+*.webm
+*.zip
+results.xml
+test-results.json

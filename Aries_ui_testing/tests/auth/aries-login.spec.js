@@ -19,7 +19,9 @@ await page.click('button:has-text("Login")');
 
         await page.click('text= Add New Request ');
         await page.click('[id="requestType"]')
-    await page.pause()
+        
+        // Verify element is visible
+        await expect(page.locator('#requestType')).toBeVisible();
   });
 //
 //   test('Invalid login', async ({ page }) => {
