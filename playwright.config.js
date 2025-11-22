@@ -36,9 +36,9 @@ testDir: './',
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'retain-on-failure',
-    video: 'retain-on-failure',  
-    screenshot: 'only-on-failure', 
+    trace: 'on',
+    video: 'on',  
+    screenshot: 'on', 
 
   },
 
